@@ -5,6 +5,7 @@ from django.contrib import admin
 #import dd_distributions.Application
 #from Application.views import test_application
 from Applications.views import test_application
+#from FileManager.views import upload_file
 
 admin.autodiscover()
 
@@ -22,5 +23,5 @@ urlpatterns = patterns('',
     url(r'^now/', 'dd_distributions.Applications.views.now'),
     url(r'^arg/(\d{1,2})/', 'dd_distributions.Applications.views.arg_test'),
     url(r'^teststatic/', 'dd_distributions.Applications.views.test_static_files'),
-
+    url(r'^upload/','dd_distributions.FileManager.views.upload_file'),
 )

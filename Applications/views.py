@@ -1,6 +1,7 @@
 # Create your views here.
 import os
 import settings
+import django.core.handlers.wsgi
 
 from django.http import HttpResponse,Http404
 import os
@@ -25,18 +26,17 @@ def now(request):
     print html
     return HttpResponse(now)
 
-def arg_test(request,offset,offset2):
+def arg_test(request,offset):
     """
 
     """
     try:
         offset = int(offset)
-        offset2 = int(offset2)
     except ValueError:
         print("ValueError")
         raise Http404()
 
-    result = "offset : %s %s " % (offset,offset2)
+    result = "offset : %s " % (offset)
     return HttpResponse(result)
 
 def test_static_files(request):
