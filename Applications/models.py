@@ -9,3 +9,10 @@ from django.contrib import admin
 #       binary_path
 #       info_path
 #
+class Applicaton(models.Model):
+    name = models.CharField(max_length=200)
+    version = models.CharField(max_length=200)
+    binary_path = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.name + self.version

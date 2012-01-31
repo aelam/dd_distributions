@@ -9,6 +9,12 @@ import datetime
 def index(request):
     return HttpResponse("Hello, World.")
 
+def app(request):
+    return HttpResponse("return an app list:")
+
+def detail(request,app_id):
+    return HttpResponse("this is app's detail : %s " % app_id)
+
 
 def test_application(request):
     return HttpResponse("Hello")
