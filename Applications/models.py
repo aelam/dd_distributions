@@ -21,5 +21,7 @@ class Applicaton(models.Model):
     binary_path = models.CharField(max_length=200)
     family = models.CharField(max_length=200,choices=FAMILY_CHOICES)
 
+#    new_features = models.TextField()
+
     def __unicode__(self):
         return self.name + self.version
