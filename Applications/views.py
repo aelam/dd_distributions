@@ -35,6 +35,8 @@ def apps(request):
 #        raise Http404
 #    return render_to_response('Applications/detail.html',{'app':app})
 
+# TODO: make detail can edit
+
 def detail(request,app_id):
     app = get_object_or_404(Applicaton,pk = app_id)
     return render_to_response('Applications/detail.html',{'app':app})
