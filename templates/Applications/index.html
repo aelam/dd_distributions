@@ -1,10 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>啊=a </title>
-</head>
-<body>
-
-</body>
-</html>
+{% if app_list %} <ul>
+    {% for app in app_list %}
+    <li><a href="/apps/{{ app.id }}/">{{ app.name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Apps are available.</p>
+{% endif %}
