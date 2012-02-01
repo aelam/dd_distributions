@@ -24,4 +24,8 @@ urlpatterns = patterns('',
     url(r'^arg/(\d{1,2})/', 'dd_distributions.Applications.views.arg_test'),
     url(r'^teststatic/', 'dd_distributions.Applications.views.test_static_files'),
     url(r'^upload/','dd_distributions.FileManager.views.upload_file'),
+
+    url(r'^apps/','dd_distributions.Applications.views.apps'),
+
 )
+
