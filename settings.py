@@ -1,12 +1,26 @@
 # Django settings for dd_distribution project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
 # ('Your Name', 'your_email@example.com'),
 )
+
+## Refer to http://lethain.com/intro-to-unintrusive-javascript-with-django/
+#import os
+#ROOT_PATH = os.path.dirname(__file__)
+#Then change these values:
+#
+#DATABASE_ENGINE = 'sqlite3'
+#DATABASE_NAME = os.path.join(ROOT_PATH, 'notes.sqlite')
+#MEDIA_ROOT = os.path.join(ROOT_PATH, 'media')
+#MEDIA_URL = 'http://127.0.0.1:8000/media/'
+#TEMPLATE_DIRS = (
+#    os.path.join(ROOT_PATH, 'templates'),
+#    )
+
 
 MANAGERS = ADMINS
 
