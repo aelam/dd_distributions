@@ -1,3 +1,7 @@
+
+<html>
+<head>This is Head</head>
+<a href="/apps/upload">Upload</a>
 {% if app_list %} <ul>
     {% for app in app_list %}
     <li><a href="/apps/{{ app.id }}/">{{ app.name }}</a></li>
@@ -6,3 +10,4 @@
 {% else %}
 <p>No Apps are available.</p>
 {% endif %}
+</html>

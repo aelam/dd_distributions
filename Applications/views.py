@@ -71,4 +71,16 @@ def test_static_files(request):
     print html
     return HttpResponse(html)
 
+def upload(request):
+    if request.method == 'GET':
+        print "GET"
+    elif request.method == 'POST':
+        print "POST"
 
+#    print request.get_full_path
+    print "Uploading..."
+
+    print "META: %s" % (request.META)
+    print "HOST: %s" % (request.get_host)
+    return render_to_response('Applications/upload.html')
+#    return HttpResponse("Upload...")
