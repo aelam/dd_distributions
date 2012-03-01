@@ -2,6 +2,14 @@
 <html>
 <head>This is Head</head>
 <a href="/apps/upload">Upload</a>
+<img src="{{ STATIC_URL }}images/hi.jpg" />
+<img src="{{ MEDIA_URL }}images/hi.jpg" />
+<img src="{{ ROOT_PATH }}" />
+
+
+<div>{{ MEDIA_URL }}
+{{ STATIC_URL }}</div>
+
 {% if app_list %} <ul>
     {% for app in app_list %}
     <li><a href="/apps/{{ app.id }}/">{{ app.name }}</a></li>
